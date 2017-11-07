@@ -1,12 +1,12 @@
 package com.service;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.domain.Action;
 import com.respository.ActionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 
-@Service
+@Service(timeout = 5000)
 public class ActionService {
     @Autowired
     ActionRepo actionRepo;

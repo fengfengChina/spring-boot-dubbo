@@ -1,5 +1,6 @@
 package com.domain;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.service.ActionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ import java.util.Iterator;
 @RestController("action")
 public class ActionController {
 
-    @Autowired
+    @Reference
     ActionService actionService;
 
     @RequestMapping("findAction")
